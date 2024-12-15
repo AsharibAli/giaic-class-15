@@ -54,10 +54,10 @@ function renderEmptyState(page: Page) {
   return (
     <div className="container">
       <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
-        This page has no content!
+        We&apos;re working on it!
       </h1>
       <p className="mt-2 text-base text-gray-500">
-        Open the page in Sanity Studio to add content.
+        This page is currently under construction.
       </p>
       <div className="mt-10 flex">
         <Link
@@ -91,7 +91,7 @@ export default function PageBuilder({ page }: PageBuilderPageProps) {
       // Reconcile References. https://www.sanity.io/docs/enabling-drag-and-drop#ffe728eea8c1
       return action.document.pageBuilder.map(
         (section) =>
-          currentSections?.find((s) => s._key === section?._key) || section,
+          currentSections?.find((s) => s._key === section?._key) || section
       );
     }
 
